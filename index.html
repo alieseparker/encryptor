@@ -16,10 +16,10 @@
     <script>
       var encoder = {
         setMessage: function() {
-
+          this.message = document.getElementById('message').value;
         },
         getPassword: function() {
-
+          this.password = prompt('Enter a password for encryption.');
         },
         setUrl: function() {
 
