@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Message Decoder</h1>
+    <p>This URL is encoded with the message.</p>
+    <p>Have a message to decode? Enter the password</p>
+
+    <button id="decrypt">Decrypt</button>
+
+    <script type ="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js"></script>
+
+    <script src="lib/decode.js"></script>
+
+    <script>
+      $("#decrypt").on("click", function () {
+        this.onclick = decoder.reveal();
+      });
+    </script>
+  </body>
+</html>
+

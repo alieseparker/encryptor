@@ -11,35 +11,17 @@
     <br>
     <button id="encrypt">Lock Down</button>
 
+    <script type ="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
     <script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js"></script>
 
+    <script src="lib/encode.js"></script>
+
     <script>
-      var encoder = {
-        setMessage: function() {
-          this.message = document.getElementById('message').value;
-        },
-        getPassword: function() {
-          this.password = prompt('Enter a password for encryption.');
-        },
-        setUrl: function() {
-
-        },
-        replaceMessageWithUrl: function () {
-
-        },
-        encrypt: function() {
-          cypher = CryptoJS.AES.encrypt(this.message, this.password)
-          console.log("Verified: " +
-            CryptoJS.AES.decrypt(cypher, this.password).toString(CryptoJS.enc.Utf8))
-          return cypher
-        },
-        protect: function() {
-          this.setMessage()
-          this.getPassword()
-          this.setUrl()
-          this.replaceMessageWithUrl()
-        }
-      }
+    $("#encrypt").on("click", function () {
+      this.onclick = encoder.protect();
+    });
     </script>
   </body>
 </html>
+
